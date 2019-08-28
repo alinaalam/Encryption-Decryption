@@ -10,7 +10,7 @@ public class Main {
 
         String mode = "enc";
         String text = "";
-        String readFile = "";
+        String filename = "";
         String writeFile = "System.out";
         int key = -1;
 
@@ -22,7 +22,7 @@ public class Main {
                 text = args[i+1];
             }
             if (args[i].equals("-in")) {
-                readFile = args[i+1];
+                filename = args[i+1];
             }
             if (args[i].equals("-out")) {
                 writeFile = args[i+1];
@@ -32,14 +32,11 @@ public class Main {
             }
         }
 
-        if (!readFile.isEmpty()) {
-            try {
-                text = new String(Files.readAllBytes(Paths.get(readFile)));
-            } catch (IOException e) {
-                System.out.println("Problem in reading file!");
-            }
-        }
+        text = getDataFromFile(text, filename);
+        encryptDecrypt(text, mode, key, writeFile);
+    }
 
+    public static void encryptDecrypt(String text, String mode, int key, String writeFile) {
         if (!text.isEmpty()) {
             String result = mode.equals("enc") ? encrypt(text, key) : decrypt(text, key);
             if (writeFile.contains("System.out")) {
@@ -53,6 +50,18 @@ public class Main {
                 }
             }
         }
+    }
+
+    public static String getDataFromFile(String text, String filename) {
+        if (!filename.isEmpty()) {
+            try {
+                text = new String(Files.readAllBytes(Paths.get(filename)));
+            } catch (IOException e) {
+                System.out.println("Problem in reading file!");
+            }
+        }
+
+        return text;
     }
 
     public static String encrypt(String plainText, int key) {

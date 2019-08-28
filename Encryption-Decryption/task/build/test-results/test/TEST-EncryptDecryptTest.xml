@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-27T21:11:42" hostname="DE-MAC-104.fritz.box" time="0.076">
+<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-28T07:11:46" hostname="DE-MAC-104.fritz.box" time="0.093">
   <properties/>
-  <testcase name="start" classname="EncryptDecryptTest" time="0.076"/>
+  <testcase name="start" classname="EncryptDecryptTest" time="0.093"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[Start test 1
 Start test 2
