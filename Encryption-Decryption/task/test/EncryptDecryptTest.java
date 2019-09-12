@@ -17,7 +17,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
             new TestCase<String>()
                 .addArguments(new String[]{
                     "-alg", "unicode",
-                    "-encryptdecrypt.mode", "enc",
+                    "-mode", "enc",
                     "-key", "5",
                     "-in", "in.txt",
                     "-out", "output.txt"
@@ -28,7 +28,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
             new TestCase<String>()
                 .addArguments(new String[]{
                     "-key", "0",
-                    "-encryptdecrypt.mode", "enc",
+                    "-mode", "enc",
                     "-alg", "unicode",
                     "-in", "input.txt",
                     "-out", "output.txt"
@@ -42,14 +42,14 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
                     "-in", "i.txt",
                     "-alg", "unicode",
                     "-out", "output.txt",
-                    "-encryptdecrypt.mode", "enc"
+                    "-mode", "enc"
                 })
                 .setAttach("123456789")
                 .addFile("i.txt", "012345678"),
 
             new TestCase<String>()
                 .addArguments(new String[]{
-                    "-encryptdecrypt.mode", "dec",
+                    "-mode", "dec",
                     "-in", "input.txt",
                     "-out", "output.txt",
                     "-alg", "unicode",
@@ -60,7 +60,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
 
             new TestCase<String>()
                 .addArguments(new String[]{
-                    "-encryptdecrypt.mode", "dec",
+                    "-mode", "dec",
                     "-alg", "unicode",
                     "-key", "0",
                     "-in", "input.txt",
@@ -71,7 +71,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
 
             new TestCase<String>()
                 .addArguments(new String[]{
-                    "-encryptdecrypt.mode", "dec",
+                    "-mode", "dec",
                     "-key", "1",
                     "-in", "input.txt",
                     "-alg", "unicode",
@@ -82,7 +82,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
 
             new TestCase<String>()
                 .addArguments(new String[]{
-                    "-encryptdecrypt.mode", "enc",
+                    "-mode", "enc",
                     "-key", "5",
                     "-in", "input.txt",
                     "-alg", "shift",
@@ -93,7 +93,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
 
             new TestCase<String>()
                 .addArguments(new String[]{
-                    "-encryptdecrypt.mode", "dec",
+                    "-mode", "dec",
                     "-key", "10",
                     "-in", "input.txt",
                     "-alg", "shift",
@@ -104,7 +104,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
 
             new TestCase<String>()
                 .addArguments(new String[]{
-                    "-encryptdecrypt.mode", "enc",
+                    "-mode", "enc",
                     "-key", "12",
                     "-in", "input.txt",
                     "-alg", "shift",
@@ -115,7 +115,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
 
             new TestCase<String>()
                 .addArguments(new String[]{
-                    "-encryptdecrypt.mode", "dec",
+                    "-mode", "dec",
                     "-key", "10",
                     "-in", "input.txt",
                     "-alg", "shift",
@@ -126,7 +126,7 @@ public class EncryptDecryptTest extends BaseStageTest<String> {
 
             new TestCase<String>()
                 .addArguments(new String[]{
-                    "-encryptdecrypt.mode", "enc",
+                    "-mode", "enc",
                     "-key", "10",
                     "-in", "input.txt",
                     "-alg", "shift",

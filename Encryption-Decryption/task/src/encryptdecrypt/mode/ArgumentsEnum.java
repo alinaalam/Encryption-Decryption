@@ -4,7 +4,7 @@ public enum ArgumentsEnum {
     KEY("-key"),
     MODE("-mode"),
     READ_FILE("-in"),
-    DATA("data"),
+    DATA("-data"),
     WRITE_FILE("-out"),
     CIPHER_ALGORITHM("-alg");
 

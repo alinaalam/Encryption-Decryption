@@ -2,6 +2,7 @@ package encryptdecrypt;
 
 import encryptdecrypt.mode.ArgumentsEnum;
 import encryptdecrypt.mode.ModeFactory;
+import encryptdecrypt.util.ReadWriteFileUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +10,14 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         Map<String, String> argumentsMap = fillInArguments(args);
-        ModeFactory.executeMode(argumentsMap);
+        String data = ModeFactory.executeMode(argumentsMap);
+
+        if (argumentsMap.containsKey(ArgumentsEnum.WRITE_FILE.getValue())) {
+            ReadWriteFileUtil.writeDataToFile(data, argumentsMap.get(ArgumentsEnum.WRITE_FILE.getValue()));
+        }
+        else {
+            System.out.println(data);
+        }
     }
 
     public static Map<String, String> fillInArguments(String args[]) {

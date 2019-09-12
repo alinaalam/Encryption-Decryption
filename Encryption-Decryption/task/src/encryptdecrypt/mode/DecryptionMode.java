@@ -10,11 +10,6 @@ public class DecryptionMode extends Mode {
         }
 
         @Override
-        public Builder self() {
-            return this;
-        }
-
-        @Override
         public DecryptionMode build() {
             return new DecryptionMode(this);
         }

@@ -1,5 +1,6 @@
 package encryptdecrypt.util;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,7 +19,8 @@ public class ReadWriteFileUtil {
     }
 
     public static void writeDataToFile(String result, String filename) {
-        try (FileWriter fileWriter = new FileWriter(filename)) {
+        File file = new File(filename);
+        try (FileWriter fileWriter = new FileWriter(file)) {
             fileWriter.write(result);
         } catch (IOException e) {
             System.out.println("Problem in writing to file!");

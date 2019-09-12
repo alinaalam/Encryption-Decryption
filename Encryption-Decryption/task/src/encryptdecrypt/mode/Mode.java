@@ -18,13 +18,13 @@ public abstract class Mode {
             this.cipherAlgorithm = cipherAlgorithm;
         }
 
-        public abstract T self();
         public abstract Mode build();
     }
 
     public Mode(Builder<?> builder) {
         key = builder.key;
         data = builder.data;
+        cipherAlgorithm =  builder.cipherAlgorithm;
     }
 
     public int getKey() {
